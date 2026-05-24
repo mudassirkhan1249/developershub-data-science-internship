@@ -1,173 +1,157 @@
 # Credit Risk Prediction using Machine Learning
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-green) ![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-lightblue) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.0%2B-orange) ![License](https://img.shields.io/badge/License-MIT-yellow)
+
 ## 📌 Project Overview
-This project focuses on predicting whether a loan applicant is likely to default on a loan using Machine Learning techniques. The goal is to analyze borrower information and classify applicants as either likely to fully repay the loan or not.
 
-The project includes:
+This project is part of the **DevelopersHub Data Science Internship - Task 2**.  
+The goal is to predict whether a loan applicant is likely to default (not fully pay) using machine learning techniques.
+
+**Key steps:**
 - Exploratory Data Analysis (EDA)
-- Data Cleaning
-- Feature Engineering
-- Handling Imbalanced Data
-- Logistic Regression Model
-- Model Evaluation
+- Data cleaning & feature engineering
+- Handling imbalanced data
+- Logistic Regression model
+- Model evaluation
 
----
+## 📂 Dataset
 
-# 📂 Dataset
-Dataset used:
-- Loan Prediction / Credit Risk Dataset
+- Source: Loan Prediction / Credit Risk Dataset  
+- **Target variable:** `not_fully_paid`  
+  - `0` → Loan fully paid  
+  - `1` → Loan not fully paid (default risk)
 
-Target Variable:
-- `not_fully_paid`
+## 🛠️ Technologies Used
 
-Meaning:
-- `0` → Loan fully paid
-- `1` → Loan not fully paid (default risk)
+| Library | Purpose |
+|---------|---------|
+| Pandas, NumPy | Data manipulation |
+| Matplotlib, Seaborn | Visualization |
+| Scikit-learn | Model building, preprocessing, evaluation |
 
----
+## 📁 Repository Structure
+.
+├── credit_risk.ipynb # Jupyter notebook with full code
+├── loan_data.csv # Dataset file
+├── requirements.txt # Dependencies
+└── README.md # This file
 
-# 🛠 Technologies Used
+text
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-learn
+## 📊 Exploratory Data Analysis (EDA)
 
----
+Performed the following visualizations and analyses:
 
-# 📊 Exploratory Data Analysis (EDA)
-
-Performed:
-- Dataset overview
+- Dataset overview & info
 - Missing value analysis
 - Correlation heatmap
-- Distribution plots
-- Boxplots
-- Target variable analysis
+- Distribution plots (histograms)
+- Boxplots (outlier detection)
+- Target variable distribution
 
-Key insights:
-- Higher interest rates were associated with higher default risk.
-- Lower FICO scores showed higher chances of default.
-- Dataset was highly imbalanced.
+**Key insights:**
+- Higher interest rates → higher default risk
+- Lower FICO scores → higher default risk
+- Dataset is **highly imbalanced** (more fully-paid loans)
 
----
+## 🧹 Data Preprocessing
 
-# 🧹 Data Preprocessing
-
-Steps performed:
-- Checked missing values
+- Checked and handled missing values
 - Handled outliers
-- Renamed columns for better readability
+- Renamed columns for readability
 - One-Hot Encoding for categorical variables
-- Feature Scaling using `StandardScaler`
+- Feature scaling using `StandardScaler`
 
----
+## ⚙ Feature Engineering
 
-# ⚙ Feature Engineering
-
-New features were created to improve model learning:
+Created new features to improve model performance:
 
 - `risk_score`
 - `utilization_fico_ratio`
 - `income_installment_ratio`
 
-Feature selection was also performed using correlation analysis.
+Also performed feature selection using correlation analysis.
 
----
+## ⚖ Handling Imbalanced Data
 
-# ⚖ Handling Imbalanced Data
+The dataset had significantly more non-default cases than defaults.
 
-The dataset contained a significantly higher number of non-default cases compared to default cases.
+**Solution applied:**
+- Random undersampling
+- Balanced classes before training
 
-To solve this issue:
-- Random undersampling was applied
-- Classes were balanced before training
+This improved the model's ability to detect risky borrowers.
 
-This improved the model’s ability to detect risky borrowers.
+## 🤖 Machine Learning Model
 
----
+**Model used:** Logistic Regression
 
-# 🤖 Machine Learning Model
-
-Model Used:
-- Logistic Regression
-
-Training Steps:
-1. Train-Test Split
-2. Feature Scaling
-3. Model Training
+**Training steps:**
+1. Train-test split
+2. Feature scaling
+3. Model training
 4. Prediction
 5. Evaluation
 
----
+## 📈 Model Evaluation
 
-# 📈 Model Evaluation
+| Metric | Description |
+|--------|-------------|
+| Accuracy | Overall correctness |
+| Precision | Accuracy of positive predictions |
+| Recall | Ability to find all defaulters |
+| F1-score | Harmonic mean of precision & recall |
+| Confusion Matrix | Visualizes TP, TN, FP, FN |
 
-Evaluation metrics used:
-- Accuracy Score
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
-
-Final Results:
+**Final results:**
 - Balanced class prediction achieved
 - Improved recall for detecting loan defaults
 - Better minority class detection after handling imbalance
 
----
+## 📷 Visualizations Included
 
-# 📷 Visualizations
+- Correlation heatmap
+- Count plots (target variable)
+- Histograms of features
+- Boxplots for outlier detection
+- Confusion matrix
 
-The project includes:
-- Correlation Heatmap
-- Count Plots
-- Histograms
-- Boxplots
-- Confusion Matrix
+## 🧠 Learning Outcomes
 
----
+Through this project, I learned:
 
-# 📚 Learning Outcomes
+- Complete data cleaning workflow
+- Exploratory data analysis techniques
+- Feature engineering for financial data
+- Handling imbalanced datasets (undersampling)
+- Logistic Regression for binary classification
+- Model evaluation metrics for imbalanced problems
+- Feature selection using correlation
 
-Through this project, the following concepts were learned:
-- Data Cleaning
-- EDA
-- Feature Engineering
-- Handling Imbalanced Datasets
-- Logistic Regression
-- Model Evaluation
-- Feature Selection
+## 🚀 Future Improvements
 
----
+Possible enhancements:
 
-# 🚀 Future Improvements
-
-Possible future enhancements:
 - Random Forest Classifier
-- SMOTE for imbalance handling
-- Hyperparameter Tuning
-- ROC-AUC Analysis
-- Model Deployment using Flask or Streamlit
+- SMOTE (Synthetic Minority Oversampling)
+- Hyperparameter tuning (GridSearchCV)
+- ROC-AUC analysis
+- Deploy model using Flask or Streamlit
+
+## 📌 Conclusion
+
+A **Credit Risk Prediction** model was successfully developed using Logistic Regression. After preprocessing, feature engineering, and balancing the dataset, the model achieved balanced performance in identifying both default and non-default loan applicants. This project demonstrates the complete workflow of a real-world binary classification problem in finance.
+
+## 👨‍💻 Author
+
+**Mudassir Khan**  
+Data Science Intern @ DevelopersHub  
+Passionate about Data Science, AI, and Machine Learning
+
+## 📜 License
+
+This project is licensed under the MIT License.
 
 ---
 
-# 📌 Conclusion
-
-A Credit Risk Prediction model was successfully developed using Machine Learning techniques. After preprocessing, feature engineering, and balancing the dataset, the Logistic Regression model achieved balanced performance in identifying both default and non-default loan applicants.
-
-This project demonstrates the complete workflow of a real-world binary classification problem in finance.
-
----
-
-# 👨‍💻 Author
-
-Mudassir Khan
-
-Passionate about:
-- Data Science
-- Artificial Intelligence
-- Machine Learning
-- Problem Solving
+⭐ If you find this useful, please give it a star!
