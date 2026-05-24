@@ -148,10 +148,6 @@ A **Credit Risk Prediction** model was successfully developed using Logistic Reg
 Data Science Intern @ DevelopersHub  
 Passionate about Data Science, AI, and Machine Learning
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
 ---
 
 ⭐ If you find this useful, please give it a star!
