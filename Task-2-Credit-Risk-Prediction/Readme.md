@@ -1,7 +1,6 @@
 # Credit Risk Prediction using Machine Learning
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-green) ![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-lightblue) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.0%2B-orange) ![License](https://img.shields.io/badge/License-MIT-yellow)
-
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Pandas](https://img.shields.io/badge/Pandas-1.3%2B-green) ![NumPy](https://img.shields.io/badge/NumPy-1.21%2B-lightblue) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.0%2B-orange)
 ## 📌 Project Overview
 
 This project is part of the **DevelopersHub Data Science Internship - Task 2**.  
